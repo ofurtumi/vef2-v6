@@ -1,0 +1,24 @@
+.divStyle {
+	width: 100%;
+	height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+.h1Style, .h2Style {
+    font: bold 5em arial;
+}
+
+.h2Style {
+    cursor: pointer;
+}
+
+.h2Style:hover,
+.h2Style:active,
+.h2Style:focus-visible {
+    text-decoration: underline;
+}
