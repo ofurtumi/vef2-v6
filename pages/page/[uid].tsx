@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { fetchFromPrismic } from '../../api/prismic';
 import styles from '../../styles/Page.module.css';
 import Header from '../header';
-import { Author, Data, Page, Slice } from '../types';
+import { Author, Data, Page, Slice } from '../../types';
 
 type Props = {
 	page: Page;

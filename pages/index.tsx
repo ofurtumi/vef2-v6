@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import Header from './header';
 import { PrismicRichText } from '@prismicio/react';
 
-import { Pages, AllPages, Edges, HomePage } from './types';
+import { Pages, AllPages, Edges, HomePage } from '../types';
 
 type Props = {
 	allPages: AllPages;
