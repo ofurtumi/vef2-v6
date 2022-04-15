@@ -23,6 +23,9 @@ export type Author = {
 export type Slice = {
 	type: string;
 	primary: {
+		name?: PrismicRichText;
+		role?: PrismicRichText;
+		description?: PrismicRichText;
 		text?: PrismicRichText;
 		position?: boolean;
 		img?: PrismicImage;
@@ -39,12 +42,13 @@ export type SliceBody = Array<Slice>;
 
 export type Page = {
 	_meta: {
-		uid: String;
+		uid: string;
+		lastPublicationDate: string;
 	};
 	title: PrismicRichText;
-	textContent: PrismicRichText;
-	image: PrismicImage;
-	authorGroup: Array<{ author: Author }>;
+	// textContent: PrismicRichText;
+	// image: PrismicImage;
+	// authorGroup: Array<{ author: Author }>;
 	body?: SliceBody;
 };
 

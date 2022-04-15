@@ -1,0 +1,62 @@
+fragment page on Page {
+	_meta {
+		uid
+	}
+	title
+	textContent
+	image
+	authorGroup {
+		author {
+			... on Author {
+				_meta {
+					uid
+				}
+				name
+				title
+				image
+				description
+			}
+		}
+	}
+	body {
+		... on PageBodyImage {
+			type
+			primary {
+				position
+				img
+				imgtxt
+			}
+		}
+		... on PageBodyAccordion {
+			type
+			primary {
+				accordiontitle
+			}
+			fields {
+				heading
+				content
+			}
+		}
+		... on PageBodyTxt {
+			type
+			primary {
+				text
+			}
+		}
+		# ... on PageBodyAuthor {
+		# 	type
+		# 	primary {
+		# 		name
+		# 		role
+		# 		description
+		# 		img
+		# 	}
+		# }
+	}
+}
+
+query ($uid: String = "") {
+	page(uid: $uid, lang: "is") {
+		...page
+	}
+}
